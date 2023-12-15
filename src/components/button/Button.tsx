@@ -31,7 +31,7 @@ const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps) => {
     }
 
     return (
-        <input type="button" onClick={() => { console.log('I am clicked') }} name="htmlButton" style={buttonStyle} value={props.name}></input>
+        <input type="button" onClick={() => {  props.onClick() }} name="htmlButton" style={buttonStyle} value={props.name}></input>
     )
 }
 

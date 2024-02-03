@@ -2,7 +2,8 @@ interface TimerProps {
 
     timerName: string,
     startTimer: number,
-    onTimeout : ()=>void
+    onTimeout : ()=>void,
+    border : {apply : boolean, color: 'red'|'black'|'blue', width : 'thin' | 'thick'}
 
 }
 

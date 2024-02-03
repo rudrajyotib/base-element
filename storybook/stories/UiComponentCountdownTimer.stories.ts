@@ -26,7 +26,26 @@ export const Primary: Story = {
   args: {
     startTimer:195,
     timerName: 'storyTimer',
-    onTimeout: ()=>{console.log('Done')}
+    onTimeout: ()=>{console.log('Done')},
+    border: {apply:true, color:'red', width:'thin'}
+  },
+};
+
+export const NoBorder: Story = {
+  args: {
+    startTimer:195,
+    timerName: 'storyTimer',
+    onTimeout: ()=>{console.log('Done')},
+    border: {apply:false, color:'red', width:'thin'}
+  },
+};
+
+export const ThickBorder: Story = {
+  args: {
+    startTimer:195,
+    timerName: 'storyTimer',
+    onTimeout: ()=>{console.log('Done')},
+    border: {apply:true, color:'blue', width:'thick'}
   },
 };
 

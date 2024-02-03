@@ -26,7 +26,9 @@ export const Primary: Story = {
   args: {
     data: [{value:'A', label:'Option A'}, {value:'B', label:'Option B'}],
     groupId: 'RadioWithoutDefaultSelection',
-    onChange : (selected: string) => {console.log('selected value::'+selected)}
+    onChange : (selected: string) => {console.log('selected value::'+selected)},
+    groupBorder:false,
+    radioBorder: false
   },
 };
 
@@ -35,7 +37,43 @@ export const RadioWithDefaultSelection: Story = {
       data: [{value:'A', label:'Option A And a long text to follow'}, {value:'B', label:'Option B'}],
       groupId: 'RadioWithoutDefaultSelection',
       defaultSelected: 'A',
-      onChange : (selected: string) => {}
+      onChange : (selected: string) => {},
+      groupBorder:false,
+      radioBorder: false
+    },
+  };
+
+  export const RadioWithGroupBorder: Story = {
+    args: {
+      data: [{value:'A', label:'Option A And a long text to follow'}, {value:'B', label:'Option B'}],
+      groupId: 'RadioWithoutDefaultSelection',
+      defaultSelected: 'A',
+      onChange : (selected: string) => {},
+      groupBorder:true,
+      radioBorder: false
+    },
+  };
+
+  export const RadioWithRadioBorder: Story = {
+    args: {
+      data: [{value:'A', label:'Option A And a long text to follow'}, {value:'B', label:'Option B'}],
+      groupId: 'RadioWithoutDefaultSelection',
+      defaultSelected: 'A',
+      onChange : (selected: string) => {},
+      groupBorder:false,
+      radioBorder: true
+    },
+  };
+
+  export const RadioWithRadioBorderCompact: Story = {
+    args: {
+      data: [{value:'A', label:'Option A And a long text to follow'}, {value:'B', label:'Option B'}],
+      groupId: 'RadioWithoutDefaultSelection',
+      defaultSelected: 'A',
+      onChange : (selected: string) => {},
+      groupBorder:false,
+      radioBorder: true,
+      compact: true
     },
   };
   

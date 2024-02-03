@@ -6,7 +6,8 @@ interface RadioProps{
     onChange : (selected: string) => void,
     groupBorder : boolean,
     radioBorder: boolean,
-    compact ?: boolean
+    compact ?: boolean,
+    backgroundColor ?: 'white' | 'blue'
 
 }
 

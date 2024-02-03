@@ -28,7 +28,10 @@ const Radio: React.FunctionComponent<RadioProps> = (props: RadioProps) => {
         radioRowStyle.border = '1px solid #cbcdcf'
         radioRowStyle.borderRadius = '0.25em'
     }
-    const radioButtonStyle : React.CSSProperties = { display: 'flex', flex: 1, paddingRight: '20px' }
+    if (props.backgroundColor ){
+        radioRowStyle.backgroundColor = props.backgroundColor
+    }
+    const radioButtonStyle : React.CSSProperties = { display: 'flex', flex: 1, paddingRight: '20px' , justifyContent:'center'}
     const radioOptionStyle : React.CSSProperties = { display: 'flex', flex: 4 }
     if (props.compact && props.compact === true){
         radioOptionStyle.flex = 9

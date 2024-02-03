@@ -30,3 +30,30 @@ export const Primary: Story = {
   },
 };
 
+export const Large: Story = {
+  args: {
+    importance: 'primary',
+    name:'Some Button',
+    onClick : () => {console.log('click event')},
+    size: 'large'
+  },
+};
+
+export const Medium: Story = {
+  args: {
+    importance: 'primary',
+    name:'Some Button',
+    onClick : () => {console.log('click event')},
+    size: 'medium'
+  },
+};
+
+export const Small: Story = {
+  args: {
+    importance: 'primary',
+    name:'btn',
+    onClick : () => {console.log('click event')},
+    size: 'small'
+  },
+};
+

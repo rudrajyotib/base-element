@@ -29,7 +29,19 @@ const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps) => {
         touchAction: 'manipulation',
         width: '100%',
     }
-
+    if (props.size){
+        let size = ''
+        if (props.size === 'large'){
+            size = '200px'
+        }
+        if (props.size === 'medium'){
+            size = '150px'
+        }
+        if (props.size === 'small'){
+            size = '100px'
+        }
+        buttonStyle.width = size
+    }
     return (
         <input type="button" onClick={() => {  props.onClick() }} name="htmlButton" style={buttonStyle} value={props.name}></input>
     )

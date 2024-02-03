@@ -25,7 +25,7 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     data: [{value:'A', label:'Option A'}, {value:'B', label:'Option B'}],
-    groupId: 'RadioWithoutDefaultSelection',
+    groupId: 'RadioPrimary',
     onChange : (selected: string) => {console.log('selected value::'+selected)},
     groupBorder:false,
     radioBorder: false
@@ -35,7 +35,7 @@ export const Primary: Story = {
 export const RadioWithDefaultSelection: Story = {
     args: {
       data: [{value:'A', label:'Option A And a long text to follow'}, {value:'B', label:'Option B'}],
-      groupId: 'RadioWithoutDefaultSelection',
+      groupId: 'RadioWithDefaultSelectionA',
       defaultSelected: 'A',
       onChange : (selected: string) => {},
       groupBorder:false,
@@ -46,7 +46,7 @@ export const RadioWithDefaultSelection: Story = {
   export const RadioWithGroupBorder: Story = {
     args: {
       data: [{value:'A', label:'Option A And a long text to follow'}, {value:'B', label:'Option B'}],
-      groupId: 'RadioWithoutDefaultSelection',
+      groupId: 'RadioWithGroupBorder',
       defaultSelected: 'A',
       onChange : (selected: string) => {},
       groupBorder:true,
@@ -57,7 +57,7 @@ export const RadioWithDefaultSelection: Story = {
   export const RadioWithRadioBorder: Story = {
     args: {
       data: [{value:'A', label:'Option A And a long text to follow'}, {value:'B', label:'Option B'}],
-      groupId: 'RadioWithoutDefaultSelection',
+      groupId: 'RadioWithRadioBorder',
       defaultSelected: 'A',
       onChange : (selected: string) => {},
       groupBorder:false,
@@ -68,12 +68,13 @@ export const RadioWithDefaultSelection: Story = {
   export const RadioWithRadioBorderCompact: Story = {
     args: {
       data: [{value:'A', label:'Option A And a long text to follow'}, {value:'B', label:'Option B'}],
-      groupId: 'RadioWithoutDefaultSelection',
+      groupId: 'RadioWithRadioBorderCompactAndBackgroundColor',
       defaultSelected: 'A',
       onChange : (selected: string) => {},
       groupBorder:false,
       radioBorder: true,
-      compact: true
+      compact: true,
+      backgroundColor : 'blue'
     },
   };
   

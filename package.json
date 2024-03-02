@@ -1,6 +1,6 @@
 {
   "name": "rb-base-element",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "basic html elements as react components",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

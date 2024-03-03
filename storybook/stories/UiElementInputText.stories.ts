@@ -27,6 +27,7 @@ export const Primary: Story = {
     placeHolderText: 'Welcome alpha text',
     textType: 'alphanumeric',
     name: 'alphanumerictext',
+    value: 'ABC123abc',
     onChangeHandler: ((text:string)=>{
         console.log('Text value:', text)
     }),
@@ -38,6 +39,7 @@ export const AlphaOnlyTextBox: Story = {
         placeHolderText: 'Welcome numeric text',
         textType: 'alpha',
         name: 'alphatext',
+        value: 'ASA',
         onChangeHandler: ((text:string)=>{
             console.log('Text value:', text)
         }),
@@ -47,8 +49,9 @@ export const AlphaOnlyTextBox: Story = {
   export const NumericText: Story = {
     args: {
         placeHolderText: 'Welcome numeric text',
-        textType: ' numeric',
+        textType: 'numeric',
         name: 'numerictext',
+        value: '123',
         onChangeHandler: ((text:string)=>{
             console.log('Text value:', text)
         }),
@@ -61,6 +64,19 @@ export const AlphaOnlyTextBox: Story = {
         placeHolderText: 'Welcome numeric text',
         textType: 'uppercase',
         name: 'uppercaseText',
+        value: 'ABC',
+        onChangeHandler: ((text:string)=>{
+            console.log('Text value:', text)
+        }),
+      },
+  };
+
+  export const DecimalFractionText: Story = {
+    args: {
+        placeHolderText: 'Welcome decimal text',
+        textType: 'decimal-fraction',
+        name: 'decimal-fraction-Text',
+        value: '0.00',
         onChangeHandler: ((text:string)=>{
             console.log('Text value:', text)
         }),

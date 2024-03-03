@@ -4,7 +4,7 @@ import { TextInputProps } from "./TextInputProps"
 
 const TextInput = (props: TextInputProps) => {
 
-    const [content, setContent] = useState("")
+    const [content, setContent] = useState(props.value)
     const textInputStyle: React.CSSProperties = {
         backfaceVisibility: 'hidden',
         borderRadius: '6px',
@@ -37,27 +37,32 @@ const TextInput = (props: TextInputProps) => {
             onChange={(e)=>{
                 var textContent = e.target.value
                 let validText = false
-                if (props.textType === 'alpha'){
-                    if (/^[a-zA-Z]+$/.test(textContent)){
+                if (props.textType === 'alpha'){       
+                    if (textContent === '' || /^[a-zA-Z]+$/.test(textContent)){
                         validText = true
                     }
-                }else if (props.textType === ' numeric'){
-                    if (/^[0-9]+$/.test(textContent)){
+                }else if (props.textType === 'numeric'){
+                   if (textContent === ''  || /^[0-9]+$/.test(textContent)){
                         validText = true
                     }
-                }else if (props.textType === 'uppercase'){
-                    if (/^[a-zA-Z]+$/.test(textContent)){
+                }else if (props.textType === 'decimal-fraction'){
+                    if (textContent === ''  || /^\d*\.?\d*$/.test(textContent)){
+                         validText = true
+                     }
+                 }else if (props.textType === 'uppercase'){
+                    if (textContent === '' || /^[a-zA-Z]+$/.test(textContent)){
                         validText = true
                         textContent = textContent.toUpperCase()
                     }
                 }else if (props.textType === 'alphanumeric'){
-                    if (/^[a-zA-Z0-9]+$/.test(textContent)){
+                    if (textContent === '' || /^[a-zA-Z0-9]+$/.test(textContent)){
                         validText = true
                     }
                 }
                 if (validText === true){
                     setContent(textContent)
-                    props.onChangeHandler(content)
+                    let passOnText = (props.textType === 'numeric' || props.textType === 'decimal-fraction') && textContent === '' ? '0' : textContent
+                    props.onChangeHandler(passOnText)
                 }
                 
             }}

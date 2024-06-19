@@ -83,5 +83,17 @@ export const AlphaOnlyTextBox: Story = {
       },
   };
 
+  export const SentenceText: Story = {
+    args: {
+        placeHolderText: 'Welcome sentence text',
+        textType: 'alpha-sentence',
+        name: 'alpha-sentence-Text',
+        value: 'two words',
+        onChangeHandler: ((text:string)=>{
+            console.log('Text value:', text)
+        }),
+      },
+  };
+
  
   

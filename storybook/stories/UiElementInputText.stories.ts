@@ -95,5 +95,17 @@ export const AlphaOnlyTextBox: Story = {
       },
   };
 
+  export const FreeText: Story = {
+    args: {
+        placeHolderText: 'Welcome sentence text',
+        textType: 'freetext',
+        name: 'freetext-Text',
+        value: 'two words',
+        onChangeHandler: ((text:string)=>{
+            console.log('Text value:', text)
+        }),
+      },
+  };
+
  
   

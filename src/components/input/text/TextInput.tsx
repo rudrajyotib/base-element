@@ -62,6 +62,8 @@ const TextInput = (props: TextInputProps) => {
                     if (textContent === '' || /^[a-zA-Z0-9 ]+$/.test(textContent)){
                         validText = true
                     }
+                }else if (props.textType === 'freetext') {
+                    validText = true;
                 }
                 if (validText === true){
                     setContent(textContent)
